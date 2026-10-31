@@ -63,6 +63,7 @@ flowchart TB
 | `packages/design-tokens/` | Halo design tokens |
 | `packages/i18n/` | `t(key, locale)` with `en` and `hi` |
 | `packages/feature-flags/` | Cached flag evaluation |
+| `packages/navigation/` | Every role, screen and phone tab from the Functional Overview and spec Table 7-A, each tied to its requirement modules |
 | `pnpm-workspace.yaml` | Workspace definition; also pins one React version for both apps |
 
 ## Run it locally

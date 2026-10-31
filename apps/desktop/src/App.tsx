@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { createClient } from '@dhruva/api-client';
 import { colors, font, radius, spacing } from '@dhruva/design-tokens';
 import { t, type Locale } from '@dhruva/i18n';
+import { roles } from '@dhruva/navigation';
 
 const api = createClient({ baseUrl: '/api', devTenantId: import.meta.env.VITE_DEV_TENANT_ID });
 
@@ -15,6 +16,8 @@ export function App() {
   const [locale, setLocale] = useState<Locale>('en');
   const [platformUp, setPlatformUp] = useState<boolean | null>(null);
   const [campuses, setCampuses] = useState<Campus[]>([]);
+  const [roleKey, setRoleKey] = useState(roles[0].key);
+  const role = roles.find((r) => r.key === roleKey) ?? roles[0];
 
   useEffect(() => {
     api.health().then(() => setPlatformUp(true)).catch(() => setPlatformUp(false));
@@ -52,6 +55,25 @@ export function App() {
           ))}
         </ul>
       )}
+
+      {/* Screen registry from @dhruva/navigation: every Functional Overview screen, tied to its spec requirement modules. */}
+      <h2>Screens</h2>
+      <label>
+        Role{' '}
+        <select value={roleKey} onChange={(e) => setRoleKey(e.target.value)}>
+          {roles.map((r) => (
+            <option key={r.key} value={r.key}>{r.label}</option>
+          ))}
+        </select>
+      </label>
+      <p style={{ color: colors.textMuted }}>Phone tabs: {role.phoneTabs.join(' · ') || 'none'}</p>
+      <ul>
+        {role.desktop.map((sc) => (
+          <li key={sc.key}>
+            {sc.label} <span style={{ color: colors.textMuted }}>· {sc.req.join(', ')}{sc.only ? ` · ${sc.only} only` : ''}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
