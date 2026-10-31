@@ -14,6 +14,7 @@
     "@dhruva/design-tokens": "workspace:*",
     "@dhruva/feature-flags": "workspace:*",
     "@dhruva/i18n": "workspace:*",
+    "@dhruva/navigation": "workspace:*",
     "expo": "~58.0.21",
     "expo-constants": "~58.0.14",
     "expo-status-bar": "~58.0.4",
