@@ -1,0 +1,8 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# Desktop and phone must share one React version (Expo pins it). Update both together.
+overrides:
+  react: 19.3.0
+  react-dom: 19.3.0

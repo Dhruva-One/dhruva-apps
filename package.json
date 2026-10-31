@@ -1,0 +1,11 @@
+{
+  "name": "dhruva-apps",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "desktop": "pnpm --filter @dhruva/desktop dev",
+    "mobile": "pnpm --filter @dhruva/mobile start",
+    "build:desktop": "pnpm --filter @dhruva/desktop build",
+    "typecheck": "pnpm -r typecheck"
+  }
+}

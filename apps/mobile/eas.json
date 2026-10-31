@@ -1,0 +1,14 @@
+{
+  "cli": { "appVersionSource": "remote" },
+  "build": {
+    "development": { "developmentClient": true, "distribution": "internal", "channel": "development" },
+    "staging": {
+      "distribution": "internal",
+      "channel": "staging",
+      "ios": { "bundleIdentifier": "in.dhruvaone.app.staging" },
+      "android": { "applicationId": "in.dhruvaone.app.staging" }
+    },
+    "production": { "channel": "production", "autoIncrement": true }
+  },
+  "submit": { "production": {} }
+}

@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "DhruvaOne",
+    "slug": "dhruvaone",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "dhruvaone",
+    "ios": { "bundleIdentifier": "in.dhruvaone.app", "supportsTablet": false },
+    "android": { "package": "in.dhruvaone.app" },
+    "extra": {
+      "platformUrl": "http://localhost:3000",
+      "devTenantId": "11111111-1111-1111-1111-111111111111"
+    }
+  }
+}
