@@ -25,7 +25,7 @@ const s = (key: string, label: string, req: string[], only?: Surface): Screen =>
 export const roles: Role[] = [
   { key: 'owner', label: 'Group owner', overview: 'Part 1 · Group Owner', phoneTabs: ['Home', 'Campuses', 'Insights', 'Calendar'], desktop: [
     s('overview', 'Overview', ['DSK-OWN', 'AI-FOC']), s('onboarding', 'Onboarding', ['DSK-OWN', 'XCT-IMP'], 'desktop'), s('add-campus', 'Add a campus', ['DSK-OWN', 'XCT-IMP'], 'desktop'),
-    s('campuses', 'Campuses', ['DSK-OWN']), s('admissions', 'Admissions', ['DSK-OWN']), s('insights', 'Insights', ['DSK-OWN']),
+    s('campuses', 'Campuses', ['DSK-OWN']), s('admissions', 'Admissions', ['DSK-OWN']), s('insights', 'Insights', ['DSK-OWN', 'MOB-STF']),
     s('reports', 'Reports', ['DSK-OWN', 'XCT-RPT']), s('notices', 'Notices', ['XCT-CAL']), s('calendar', 'Calendar', ['XCT-CAL']), s('approvals', 'Approvals', ['XCT-APR'])] },
   { key: 'principal', label: 'Principal', overview: 'Part 1 · Principal', phoneTabs: ['Today', 'Calendar', 'Fees', 'Reports', 'Me'], desktop: [
     s('today', 'Today', ['DSK-PRI', 'AI-FOC']), s('attendance', 'Attendance', ['DSK-PRI']), s('absence-watch', 'Absence watch', ['DSK-PRI']), s('fee-defaulters', 'Fee defaulters', ['DSK-PRI']),
